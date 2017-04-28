@@ -1,0 +1,23 @@
+<!-- <ng2-dropdown class="dropdown"
+  (onItemSelected)="onItemSelected($event)"
+  (onItemClicked)="onItemClicked($event, name)"
+  (onShow)="onShow($event)"
+  (onHide)="onHide($event, name)"
+  >
+    <ng2-dropdown-button >
+      {{this.title}}
+    </ng2-dropdown-button>
+   <ng2-dropdown-menu offset="00"  >
+       <ng2-menu-item  *ngFor="let item of this.data" value={{item.value}}>
+         {{item.name}}
+       </ng2-menu-item>
+
+       <div class='ng2-menu-divider'></div>
+   </ng2-dropdown-menu>
+</ng2-dropdown>
+ -->
+ <md-select placeholder={{this.title}}>
+  <md-option *ngFor="let item of this.data" [value]="item.value">
+    {{ item.name }}
+  </md-option>
+</md-select>

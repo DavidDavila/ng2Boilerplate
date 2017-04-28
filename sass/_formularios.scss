@@ -1,0 +1,238 @@
+.formrow {
+  position: relative;
+  width: 100%;
+  padding: 1.2rem 0 2rem 0;
+
+  &.formButton {
+    padding-top:0;
+  }
+
+  &.formrowPL {
+    padding-left: 2rem;
+  }
+
+  &.formLinkCenter {
+    text-align: center;
+  }
+
+  &.radioButton {
+    padding: 0 0 2rem 0;
+  }
+
+  &.radioButton02 {
+    padding: 0 0 1rem 0;
+  }
+
+  &.formrowInfo {
+
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+
+  > a {
+    font-size:1.4rem;
+  }
+
+  .mod-tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    padding: 0.7rem;
+    margin: 0;
+  }
+
+  + h3 {
+    padding-top: 1rem;
+  }
+}
+
+label {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.7rem;
+  font-size: 1.2rem;
+  line-height: normal;
+  padding: 0.6rem 0;
+  color: $negro01;
+  text-transform: uppercase;
+  @include transition(all .2s linear);
+  font-family: 'Source Sans Pro', sans-serif;
+  z-index: 0;
+  background: $blanco;
+
+  i {
+    position: absolute;
+    top: 0.4rem;
+    right: -2rem;
+  }
+
+  &.top {
+    top: 0rem;
+    padding: 0;
+    font-size: 1rem;
+    color: $gris01;
+  }
+
+  &.radioButton {
+    position:relative;
+    text-transform: none;
+    top:0;
+    left:0;
+    padding-left:0.3rem;
+    color: $gris01
+  }
+}
+
+input[type='text'] {
+  outline : none;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  border: none;
+  border-bottom: 0.1rem solid $negro01;
+  padding: 0.7rem 1.7rem;
+  font-size: 1.4rem;
+  line-height: normal;
+  color: $negro01;
+  margin: 0;
+  @include transition(all .2s linear);
+  background: $blanco;
+  z-index: 0;
+  position: relative;
+  height: 3.1rem;
+
+  &:focus,
+  &.ng-dirty {
+
+    &:-webkit-autofill {
+      background-color : $blanco !important;
+      -webkit-box-shadow: none;
+      -webkit-text-fill-background: $blanco !important;
+      -webkit-box-shadow: 0 0 0px 1000px $blanco inset;
+    }
+
+    /* Movemos el label arriba*/
+    + label {
+      top: 0;
+      font-size: 1rem;
+      padding: 0;
+      color: $gris01;
+        
+      i {
+        display:none;
+      }
+    }
+  }
+  &:disabled {
+    background: $blanco;
+  }
+  &:-webkit-autofill {
+    background-color : $blanco !important;
+    -webkit-box-shadow: none;
+    -webkit-text-fill-background: $blanco !important;
+    -webkit-box-shadow: 0 0 0px 1000px $blanco inset;
+  }
+
+  &.error {
+    border-color: $rojo01;
+  }
+}
+
+
+input[type='password'],
+input[type='number'],
+input[type='email'],
+input[type='tel'],
+input[type='search'],
+select {
+  @extend input[type='text'];
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input[type='date'] {
+  @extend input[type='number'];
+}
+
+input[type='date']::-webkit-clear-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type='checkbox'] {
+  &:focus,
+  &.ng-dirty {
+    outline-style : none;
+
+    &:-webkit-autofill {
+      background-color : $blanco !important;
+      -webkit-box-shadow: none;
+      -webkit-text-fill-background: $blanco !important;
+      -webkit-box-shadow: 0 0 0px 1000px $blanco inset;
+    }
+  }
+}
+
+input[type='radio'] {
+  @extend input[type='checkbox'];
+
+  &:checked {
+    + label {
+      color: $negro01;
+      font-weight: 600;
+    }
+  }
+}
+
+textarea {
+  @extend input[type='text'];
+  resize: none;
+}
+
+button[type='submit'] {
+  position: relative;
+  text-align: center;
+  font-size: 1.8rem;
+  width: auto;
+  line-height: normal;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+  cursor: pointer;
+  padding: 2rem 4.5rem;
+  margin: 0;
+  color: $blanco;
+  background: $verde01;
+  @include transition(color .2s ease-in-out, background .2s ease-in-out);
+
+  &.bigButton {
+    padding: 2rem 2.1rem;
+    width: 100%;
+    float:none;
+  }
+
+  &:disabled {
+    background: $gris02;
+  }
+
+  i {
+    font-size: 2.6rem;
+    position: absolute;
+    top: calc(50% - 1.3rem);
+    right: 20%;
+  }
+}
+
+

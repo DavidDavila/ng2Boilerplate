@@ -1,0 +1,19 @@
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+
+// fonts
+/*
+Equivalencia font-face <--> font-weight
+  700 bold
+  600 semibold
+  400 regular
+  300 light
+*/
+
+
+// conversion 10px to 1rem
+html {
+    font-size: 62.5%;
+}
+/* Style for "Rectangle 31 C" */

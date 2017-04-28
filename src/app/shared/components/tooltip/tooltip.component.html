@@ -1,0 +1,8 @@
+<div class="mod-tooltip" id="{{tooltipInfo}}">
+    <span *ngIf="icon === 'error'" #tooltipIcon class="errorText"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+    <span *ngIf="icon === 'ok'" #tooltipIcon class="okText"><i class="fa fa-check" aria-hidden="true"></i></span>
+    <p class="tooltipTitular" #tooltipTitular *ngIf="literal">{{literal}}</p>
+    <div #tooltipDescr class="tooltipDescr" [ngClass]="{'active': hover, 'visible': visible, 'top': posicionTooltip === 'top', 'bottom': posicionTooltip === 'bottom'}">
+        <span #tooltipDescrSpan [innerHTML]="descp"></span>
+    </div>
+</div>

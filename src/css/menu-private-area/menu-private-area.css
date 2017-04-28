@@ -1,0 +1,42 @@
+#menu-private-area {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #333333;
+}
+#menu-private-area > ul > li {
+  font-size: 1.8rem;
+}
+#menu-private-area > ul > li:after {
+  display: none;
+}
+#menu-private-area > ul > li > span i {
+  float: right;
+}
+#menu-private-area > ul > li > ul {
+  border-top: 1px solid #E4E4E4;
+  width: 100%;
+  padding: 0;
+}
+#menu-private-area > ul > li > ul > li {
+  padding: 0;
+}
+#menu-private-area > ul > li > ul > li > a {
+  padding: 0 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  color: #74767B;
+  display: block;
+  line-height: 3.5rem;
+}
+#menu-private-area > ul > li > ul > li > a.selected {
+  font-weight: bold;
+  border-left: 2px solid #0055b2;
+  border-right: 2px solid #0055b2;
+  color: #333333;
+}
+#menu-private-area > ul > li > ul > li:after {
+  display: none;
+}

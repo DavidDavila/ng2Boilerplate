@@ -1,0 +1,65 @@
+<section>
+
+  <article class="row">
+    <h1>Comencemos</h1>
+  </article>
+
+  <article class="row flexContent flex1">
+
+    <div class="colum">
+      <div class="mod-border">
+
+        <h2 class="disabledText">
+          1. Datos personales
+          <a class="lnkModificar" routerLink="/acceso/datos-personales" title="modificar datos personales"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
+        </h2>
+      </div>
+
+      <div class="mod-border">
+        <h2 class="disabledText">
+          2. Algo sobre tí
+          <a class="lnkModificar" routerLink="/acceso/acerca-de-ti" title="modificar datos personales"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
+        </h2>
+      </div>
+
+      <div class="mod-border">
+        <h2>3. Preferencias de comunicación</h2>
+        <p>Aunque desde tu área privada puedes ver todas las ofertas que tenemso para tí, vamos a comunicarnos también para enviarte ofertas personalizadas. Podemos hacerlo tanto por correo electrónico como por envío tradicional. Tú eliges.</p>
+
+        <form [formGroup]="stateForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <div class="formrow radioButton02">
+            <input type="radio" formControlName="comunicacion" id="email" value="email"/>
+            <label htmlFor="email" class="radioButton">Correo electrónico</label>
+          </div>
+
+          <div class="formrow radioButton02">
+            <input type="radio" formControlName="comunicacion" id="postal" value="postal"/>
+            <label htmlFor="postal" class="radioButton">Envío postal</label>
+          </div>
+
+          <div class="formrow radioButton02">
+            <input type="radio" formControlName="comunicacion" id="nada" value="nada"/>
+            <label htmlFor="nada" class="radioButton">No me enviéis nada. Ya me las busco yo.</label>
+          </div>
+
+          <div class="flexContent flex4 flexStartEnd">
+            <div class="colum last">
+              <div class="formrow formButton">
+                <button type="submit" [disabled]="!stateForm.valid" class="bigButton">
+                  <span *ngIf="!sending">Continuar</span>
+                  <span *ngIf="sending">Un momento <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+
+      </div>
+    </div>
+
+  </article>
+
+
+</section>

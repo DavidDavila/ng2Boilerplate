@@ -1,0 +1,121 @@
+<section>
+
+  <article class="row">
+    <h1>Comencemos</h1>
+  </article>
+
+  <article class="row flexContent flex1">
+
+    <div class="colum">
+      <div class="mod-border">
+
+        <h2>1. Datos personales</h2>
+        <h3>¡Hola {{this._clientModel.email}}!</h3>
+        <p>Hablemos como personas. Para empezar necesitamos que nos digas, al menos, cómo te llamas y de qué forma podemos contactar contigo.</p>
+
+        <form [formGroup]="stateForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <div class="flexContent flex4">
+
+            <div class="colum">
+              <div class="formrow">
+                <input type="text" name="name" id="name" formControlName="name" />
+                <label for="name" [ngClass]="{'top': stateForm.value.name}">NOMBRE *</label>
+              </div>
+            </div>
+
+            <div class="colum">
+              <div class="formrow">
+                <input type="text" name="surname" id="surname" formControlName="surname"/>
+                <label for="surname" [ngClass]="{'top': stateForm.value.surname}">Apellidos *</label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="flexContent flex4">
+
+            <div class="colum">
+              <div class="formrow">
+                <input type="tel" name="phones" id="phones" formControlName="phones" />
+                <label for="phones" [ngClass]="{'top': stateForm.value.phones}">TELÉFONO *</label>
+              </div>
+            </div>
+
+            <div class="colum">
+              <div class="formrow">
+                <select name="fiscalIdentificationType" formControlName="fiscalIdentificationType" id="fiscalIdentificationType">
+                  <option value="dni">DNI</option>
+                  <option value="nif">NIF</option>
+                </select>
+                <label for="fiscalIdentificationType" [ngClass]="{'top': stateForm.value.fiscalIdentificationType}">TIPO DOCUMENTO *</label>
+              </div>
+            </div>
+
+            <div class="colum">
+              <div class="formrow">
+                <input type="text" name="fiscalIdentificationNumber" id="fiscalIdentificationNumber" formControlName="fiscalIdentificationNumber" />
+                <label for="fiscalIdentificationNumber" [ngClass]="{'top': stateForm.value.fiscalIdentificationNumber}">NUM. DOCUMENTO *</label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="flexContent flex4">
+
+            <div class="colum">
+              <div class="formrow">
+                <input type="date" formControlName="birthdate" id="birthdate"/>
+                <label for="birthdate" [ngClass]="{'top': stateForm.value.name}">FECHA DE NACIMIENTO *</label>
+              </div>
+            </div>
+
+            <div class="colum">
+              <div class="formrow">
+                <input type="number" formControlName="postalCode" id="postalCode"/>
+                <label for="postalCode" [ngClass]="{'top': stateForm.value.postalCode}">Código Postal</label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="formrow radioButton">
+            <input type="checkbox" formControlName="myAccount" id="myAccount"/>
+            <label for="myAccount" class="radioButton">He leído y acepto las <a href="#" title="Condiciones Generales de uso">Condiciones Generales de uso</a></label>
+          </div>
+
+          <div class="flexContent flex4 alignCenter">
+
+            <div class="colum superBig">
+              <div class="formrow formrowInfo">
+                <p>Los campos marcados con (*) son obligatorios</p>
+              </div>
+            </div>
+
+            <div class="colum last">
+              <div class="formrow formButton">
+                <button type="submit" [disabled]="!stateForm.valid" class="bigButton">
+                  <span *ngIf="!sending">Continuar</span>
+                  <span *ngIf="sending">Un momento <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+
+      <div class="mod-border">
+        <h2 class="disabledText">2. Algo sobre tí</h2>
+      </div>
+
+      <div class="mod-border">
+        <h2 class="disabledText">3. Preferencias de comunicación</h2>
+      </div>
+    </div>
+
+  </article>
+
+
+</section>

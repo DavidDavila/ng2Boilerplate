@@ -1,0 +1,156 @@
+<section>
+
+  <article class="row">
+    <h1>Comencemos</h1>
+  </article>
+
+  <article class="row flexContent flex1">
+
+    <div class="colum">
+      <div class="mod-border">
+        <h2 class="disabledText">
+          1. Datos personales
+          <a class="lnkModificar" routerLink="/acceso/datos-personales" title="modificar datos personales"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
+        </h2>
+      </div>
+
+      <div class="mod-border">
+        <h2>
+          2. Algo sobre tí
+        </h2>
+
+        <p>Tenemos tantas ofertas como clientes. Cuanto más sepamos mejores descuentos podremos adaptar para tí desde nuestro Club Carrefour. Cuéntanos algo más para poder ofrecerte algo mejor.</p>
+
+        <form [formGroup]="stateForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <div class="flexContent flex3 alignCenter">
+
+            <div class="colum last">
+              <div class="formrow little">
+                <h4 class="pb0">¿QUÉ TE INTERESA?</h4>
+              </div>
+            </div>
+            <div class="colum">
+              <tooltip literal="¿Por qué me preguntáis esto?"
+                       descp="¿Para qué mandarte un cupón para comprar jamón de jabugo si lo que sueles comprar son bañadores?<br/>Te preguntamos esto para seleccionar cupones de descuento para tus próximas compras. Así de simple.">
+              </tooltip>
+            </div>
+          </div>
+
+          <div class="flexContent flex3">
+
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="modaMujer" id="modaMujer"/>
+                <label for="modaMujer" class="radioButton">Moda mujer</label>
+              </div>
+            </div>
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="belleza" id="belleza"/>
+                <label for="belleza" class="radioButton">Belleza</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="flexContent flex3">
+
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="joyeriaRelojeria" id="joyeriaRelojeria"/>
+                <label for="joyeriaRelojeria" class="radioButton">Joyería y relojería</label>
+              </div>
+            </div>
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="hogar" id="hogar"/>
+                <label for="hogar" class="radioButton">Decoración del hogar</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="flexContent flex3">
+
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="supermercados" id="supermercados"/>
+                <label for="supermercados" class="radioButton">Supermercados</label>
+              </div>
+            </div>
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="deporte" id="deporte"/>
+                <label for="deporte" class="radioButton">Deporte y aire libre</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="flexContent flex3">
+
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="tecnologia" id="tecnologia"/>
+                <label for="tecnologia" class="radioButton">Tecnología</label>
+              </div>
+            </div>
+            <div class="colum">
+              <div class="formrow radioButton02">
+                <input type="checkbox" formControlName="motor" id="motor"/>
+                <label for="motor" class="radioButton">Motor</label>
+              </div>
+            </div>
+          </div>
+
+          <!--<hr>-->
+
+          <!--<div class="flexContent flex3 alignCenter">-->
+
+          <!--<div class="colum formrow little last">-->
+          <!--<h4 class="pb0">HIPER DE REFERENCIA</h4>-->
+          <!--</div>-->
+
+          <!--<div class="colum">-->
+          <!--<tooltip literal="¿Por qué me preguntáis esto?"-->
+          <!--descp="Tenemos diferentes ofertas, que renovamos casi diariamente, en cada uno de nuestros centros.<br/>Queremos saber esto porque de esa forma podremos avisarte de cuándo empezarán esas promociones para que puedas anticiparte y preparar tus compras.  ¿Qué más se puede pedir?">-->
+          <!--</tooltip>-->
+          <!--</div>-->
+
+          <!--<div class="colum formrow big02 first">-->
+          <!--<input type="search" name="buscadorCentro" id="buscadorCentro" formControlName="buscadorCentro" />-->
+          <!--<label for="buscadorCentro">INDICA CODIGO POSTAL O NOMBRE <i class="fa fa-search" aria-hidden="true"></i></label>-->
+          <!--</div>-->
+
+          <!--</div>-->
+
+          <!--<div id="map">-->
+          <!--&lt;!&ndash;<sebm-google-map [latitude]="lat" [longitude]="lng">&ndash;&gt;-->
+          <!--&lt;!&ndash;<sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>&ndash;&gt;-->
+          <!--&lt;!&ndash;</sebm-google-map>&ndash;&gt;-->
+          <!--</div>-->
+
+          <div class="flexContent flex4 flexStartEnd">
+
+            <div class="colum last">
+              <div class="formrow formButton">
+                <button type="submit" [disabled]="!stateForm.valid" class="bigButton">
+                  <span *ngIf="!sending">Continuar</span>
+                  <span *ngIf="sending">Un momento <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="mod-border">
+        <h2 class="disabledText">3. Preferencias de comunicación</h2>
+      </div>
+    </div>
+
+  </article>
+
+
+</section>

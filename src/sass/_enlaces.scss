@@ -1,0 +1,84 @@
+// ---------------- Eliminar borde Azul ------------------
+
+a, button{
+  &:active{
+    outline: none;
+  }
+  &:visited{
+    outline: none;
+  }
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    outline: none;
+  }
+}
+
+// ----------------------- Enlaces ----------------------
+
+a {
+  color: $azul01;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  @include transition(color .2s ease-in-out, background .2s ease-in-out);
+  cursor: pointer;
+
+  &:hover{
+    text-decoration: underline;
+    color: $azul01;
+  }
+}
+
+a.active,
+li.active > a {
+  color: $azul01;
+
+  &:hover{
+    text-decoration: underline;
+    color: $azul01;
+  }
+}
+
+.lnkModificar {
+  position: absolute;
+  font-size:1.4rem;
+  font-weight: 400;
+  right:0;
+  top: 0.4rem;
+}
+
+// ----------------------- Botones ----------------------
+//Verde
+.btnGreen {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: normal;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+  cursor: pointer;
+  padding: 2rem 2.1rem;
+  color: $blanco;
+  background: $verde01;
+  margin: 0 0 2rem 0;
+  @include transition(color .2s ease-in-out, background .2s ease-in-out);
+
+  &:hover {
+    background: $verde02;
+    color: $blanco;
+  }
+
+  &.disabled {
+    background: $gris02;
+  }
+}
+
+//Cenrtado
+.btnCenter {
+  width: auto;
+  display: table;
+  margin:0 auto 2rem auto;
+}

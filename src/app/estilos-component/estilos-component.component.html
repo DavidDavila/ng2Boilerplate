@@ -1,0 +1,143 @@
+<section>
+
+  <article class="row flexContent flex1 little">
+    <h1>Titular 1</h1>
+  </article>
+  <article class="row flexContent flex1 little">
+    <h2>Titular 2</h2>
+  </article>
+  <article class="row flexContent flex1 little">
+    <h3>Titular 3</h3>
+  </article>
+  <article class="row flexContent flex1 little">
+    <h4>Titular 4</h4>
+  </article>
+
+  <article class="row flexContent flex2">
+
+    <div class="colum">
+      <div class="mod-border">
+
+        <p>Lorem fistrum papaar papaar papaar papaar quietooor quietooor ese hombree sexuarl. Benemeritaar al ataquerl ese hombree pecador a wan. Apetecan de la pradera a peich a gramenawer llevame al sircoo se calle ustée. Amatomaa la caidita ese que llega a peich ese que llega quietooor quietooor.</p>
+        <ul>
+          <li>papaar papaar papaar papaar quie</li>
+          <li>papaar papaar papaar papaar quie</li>
+          <li>papaar papaar papaar papaar quie</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="colum">
+      <div class="mod-border">
+
+        <form [formGroup]="stateForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <div class="formrow">
+            <input type="text" name="name" id="name" formControlName="name" />
+            <label for="name" [ngClass]="{'top': stateForm.value.name}">NOMBRE *</label>
+          </div>
+
+          <div class="formrow">
+            <input type="email" name="email" id="email" formControlName="email"/>
+            <label for="email"  [ngClass]="{'top': stateForm.value.email}">Email *</label>
+          </div>
+
+          <div class="formrow" *ngIf="nameForm != 'login'">
+            <input type="password" name="password" formControlName="password" id="password"/>
+            <label for="password" [ngClass]="{'top': stateForm.value.password}">Contraseña *</label>
+          </div>
+
+          <div class="formrow">
+            <select name="fiscalIdentificationType" formControlName="fiscalIdentificationType" id="fiscalIdentificationType">
+              <option value="dni">DNI</option>
+              <option value="nif">NIF</option>
+            </select>
+            <label for="fiscalIdentificationType" [ngClass]="{'top': stateForm.value.fiscalIdentificationType}">TIPO DOCUMENTO *</label>
+          </div>
+
+          <div class="colum">
+            <div class="formrow">
+              <input type="date" formControlName="birthdate" id="birthdate"/>
+              <label for="birthdate" [ngClass]="{'top': stateForm.value.birthdate}">FECHA DE NACIMIENTO</label>
+            </div>
+          </div>
+
+          <div class="formrow radioButton">
+            <input type="checkbox" formControlName="club" id="club"/>
+            <label for="club" class="radioButton">Acepto la <a href="#" title="cesión de los datos al Club Carrefour">cesión de los datos al Club Carrefour</a></label>
+          </div>
+
+          <div class="formrow radioButton">
+            <input type="radio" formControlName="radioo" id="radioo" value="radioo"/>
+            <label for="radioo" class="radioButton">Radiooo</label>
+          </div>
+
+          <div class="formrow formButton">
+            <button type="submit" [disabled]="!stateForm.valid" class="bigButton">
+              <span *ngIf="!sending">Continuar</span>
+              <span *ngIf="sending">Un momento <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </article>
+
+</section>
+<section>
+  <md-card>
+    <button md-button>FLAT</button>
+    <button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
+    <button md-raised-button color="primary">PRIMARY RAISED</button>
+    <button md-raised-button color="accent">ACCENT RAISED</button>
+  </md-card>
+
+  <!-- Checkboxes -->
+  <md-card>
+    <md-checkbox>Unchecked</md-checkbox>
+    <md-checkbox [checked]="true">Checked</md-checkbox>
+    <md-checkbox [indeterminate]="true">Indeterminate</md-checkbox>
+    <md-checkbox [disabled]="true">Disabled</md-checkbox>
+  </md-card>
+
+  <!-- Radio Buttons -->
+  <md-card>
+    <md-radio-button name="symbol">Alpha</md-radio-button>
+    <md-radio-button name="symbol">Beta</md-radio-button>
+    <md-radio-button name="symbol" disabled>Gamma</md-radio-button>
+  </md-card>
+
+  <!-- Slider -->
+  <md-card>
+    <md-slider min="1" max="5"></md-slider>
+  </md-card>
+  
+  <!-- Material Icons -->
+  <md-card>
+    <md-icon>home</md-icon>
+    <button md-icon-button>
+      <md-icon class="md-24">favorite</md-icon>
+    </button>
+    <button md-fab>
+      <md-icon class="md-24">fingerprint</md-icon>
+    </button>
+    <button md-mini-fab>
+      <md-icon class="md-24">add</md-icon>
+    </button>
+  </md-card>
+
+  <!-- Font Awesome Icons --> 
+  <md-card>
+    <p>Font Awesome md-icon usage</p>
+    <md-icon class="fa-2x" fontSet="fa" fontIcon="fa-birthday-cake"></md-icon>
+    <hr />
+    <button md-raised-button>
+      <md-icon class="md-24 fa-lg" fontSet="fa" fontIcon="fa-camera-retro"></md-icon>
+      Say Cheez!
+    </button>
+  </md-card>
+</section>

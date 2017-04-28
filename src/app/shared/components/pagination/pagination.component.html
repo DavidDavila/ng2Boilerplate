@@ -1,0 +1,9 @@
+<section>
+  <article>
+    <ul>
+      <li *ngFor=" let item of pagesToShow " (click)=" item !== '...' ? setActualPage(item) : '' ">
+        {{item}}
+      </li>
+    </ul>
+  </article>
+</section>

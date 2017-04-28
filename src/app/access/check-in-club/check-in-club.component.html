@@ -1,0 +1,50 @@
+<section>
+
+  <article class="row">
+    <h1>Un momento ...</h1>
+  </article>
+
+  <article class="row flexContent flex1 little">
+
+    <div class="colum">
+      <div class="mod-border">
+
+        <p>¿Nos conocemos? Revisa lo que te preguntamos para no tener que pedirte información que ya tenemos</p>
+
+        <form [formGroup]="stateForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <div class="formrow radioButton">
+            <input type="radio" formControlName="socioClub" id="siSocio" value="siSocio"/>
+            <label for="siSocio" class="radioButton">Soy del Club Carrefour</label>
+          </div>
+
+          <div class="formrow formrowPL">
+            <input type="text" name="codigoTarjeta" formControlName="codigoTarjeta" id="codigoTarjeta"/>
+            <label for="codigoTarjeta">CÓDIGO DE TARJETA *</label>
+          </div>
+
+          <div class="formrow formrowPL">
+            <input type="text" name="nif" formControlName="nif" id="nif"/>
+            <label for="nif">NIF *</label>
+          </div>
+
+          <div class="formrow radioButton">
+            <input type="radio" formControlName="socioClub" id="noSocio" value="noSocio"/>
+            <label for="noSocio" class="radioButton">No sé de qué me hablas</label>
+          </div>
+
+          <div class="formrow formButton">
+            <button type="submit" [disabled]="!stateForm.valid && stateForm.value.socioClub != 'noSocio'" class="bigButton">
+              <span *ngIf="!sending">Continuar</span>
+              <span *ngIf="sending">Un momento <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </article>
+
+</section>

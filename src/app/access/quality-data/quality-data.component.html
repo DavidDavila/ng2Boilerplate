@@ -1,0 +1,60 @@
+<section>
+
+  <article class="row">
+    <h1>¡Hola {{this._clientModel.email}}!</h1>
+  </article>
+
+  <article class="row flexContent flex1">
+
+    <div class="colum">
+      <div class="mod-border">
+
+        <p>Nos gustaría darte un trato preferencial pero, sobre todo, quisiéramos enviarte información sólo de lo que deseas y donde y cuando lo desees.</p>
+
+        <form novalidate (ngSubmit)="onSubmit()" [formGroup]="stateForm">
+
+          <p *ngIf="emails">Lo que ves a continuacion son teléfonos de contacto y correos electrónicos que nos has facilitado a lo largo del tiempo. Indica cuál quieres que sea, a partir de ahora, tu referencia de comunicación con nosotros.</p>
+          <h4 *ngIf="emails">SELECCIONA TU CORREO ELECTRÓNICO</h4>
+          <div class="formrow radioButton" *ngFor="let email of emails; let i = index">
+            <input type="radio" formControlName="email" id="email{{i}}" value="{{email}}"/>
+            <label htmlFor="email{{i}}" class="radioButton">{{email}}</label>
+          </div>
+
+          <h4>INDICA TU FECHA DE NACIMIENTO</h4>
+          <div class="flexContent flex3">
+            <div class="colum">
+              <div class="formrow">
+                <input type="date" formControlName="birthdate" id="birthdate"/>
+                <label for="birthdate" [ngClass]="{'top': stateForm.value.birthdate}">FECHA DE NACIMIENTO</label>
+              </div>
+            </div>
+            <div class="colum">
+              <tooltip literal="¿Por qué me preguntáis esto?"
+                       descp="Utilizamos esta información para enviarte cupones y promociones personalizadas.<br/><br/>Lorem ipsum dolor ver cómo convencer al cliente de que este dato es necesario para trabajar con más finura los cupones y promociones">
+              </tooltip>
+            </div>
+          </div>
+
+          <div class="formrow radioButton" *ngIf="!this._clientModel.isClub">
+            <input type="checkbox" formControlName="club" id="club"/>
+            <label for="club" class="radioButton">Acepto la <a href="#" title="cesión de los datos al Club Carrefour">cesión de los datos al Club Carrefour</a></label>
+          </div>
+
+          <div class="formrow radioButton">
+            <input type="checkbox" formControlName="myAccount" id="myAccount"/>
+            <label for="myAccount" class="radioButton">He leído y acepto las <a href="#" title="Condiciones Generales de uso">Condiciones Generales de uso</a></label>
+          </div>
+
+          <div class="formrow formButton">
+            <button type="submit" [disabled]="!stateForm.valid" class="bigButton">
+              <span *ngIf="!sending">Continuar</span>
+              <span *ngIf="sending">Un momento <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </article>
+
+</section>

@@ -1,0 +1,54 @@
+<section class="row">
+  <article class="flexContent flex4">
+
+    <h2 class="colum big">
+      Mis compras
+    </h2>
+
+    <app-dropdown (itemClicked)=" setFilter( $event, 'area' ) " class="colum" name="area" title="Area" [data]="this.areaData"></app-dropdown>
+
+    <app-dropdown (itemClicked)=" setFilter( $event, 'date' ) " class="colum" name="date" title="Rango de fechas" [data]="dateData"></app-dropdown>
+
+  </article>
+</section>
+
+<section>
+  <ul>
+
+   <li>
+      <div>
+        <span>Area</span>
+        <span>Fecha</span>
+        <span>Detalle</span>
+      </div>
+      <div>
+        <span>Estado</span>
+        <span>Importe</span>
+      </div>
+    </li>
+
+    <li>
+      <a href="">
+        <div>
+          <span class="where"></span>
+          <span class="date"></span>
+          <span class="order"></span>
+        </div>
+        <div>
+          <span class="state"></span>
+          <span class="money"></span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+<section>
+  <app-pagination (pageClicked)=" setActualPage( $event ) " [actualPage]="actualPage" [totalPages]="totalPages" ></app-pagination>
+</section>
+{{areaCurrent.name}}
+{{dateCurrent.name}}
+{{actualPage}}
+{{totalPages}}
+
+
+

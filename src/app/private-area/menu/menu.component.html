@@ -1,0 +1,95 @@
+<section class="row">
+  <nav id="menu-private-area">
+    <ul class="list">
+      <li><span>Inicio</span></li>
+
+      <li>
+        <span (click)=" this.setCurrentState( 'mis-compras' ) ">
+          Mis compras
+          <i class="fa fa-caret-right" *ngIf="this.currentState !== 'mis-compras'" aria-hidden="true"></i>
+          <i class="fa fa-caret-down" *ngIf="this.currentState === 'mis-compras'" aria-hidden="true"></i>
+        </span>
+        <ul *ngIf=" this.currentState === 'mis-compras' ">
+          <li>
+            <a
+              [ngClass]="{'selected': this.currentSubState === 'mis-compras'}"
+              (click)=" this.setCurrentSubState( 'mis-compras' ) "
+              routerLink="mis-compras">
+              Compras
+            </a>
+          </li>
+          <li>
+           <a
+              [ngClass]="{'selected': this.currentSubState === 'devoluciones'}"
+              (click)=" this.setCurrentSubState( 'devoluciones' ) "
+              routerLink="mis-compras">
+              Devoluciones
+            </a>
+          </li>
+          <li>
+            <a
+              [ngClass]="{'selected': this.currentSubState === 'reservas'}"
+              (click)=" this.setCurrentSubState( 'reservas' ) "
+              routerLink="mis-compras">
+              Reservas
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li (click)="this.setCurrentState( 'club-carrofour' ) ">
+        <span>
+          Club Carrefour
+          <i class="fa fa-caret-right" *ngIf="this.currentState !== 'club-carrofour'" aria-hidden="true"></i>
+          <i class="fa fa-caret-down" *ngIf="this.currentState === 'club-carrofour'"  aria-hidden="true"></i>
+        </span>
+      </li>
+      <li (click)="this.setCurrentState( 'financiacion' ) ">
+        <span>
+          Financiación
+          <i class="fa fa-caret-right" *ngIf="this.currentState !== 'financiacion'" aria-hidden="true"></i>
+          <i class="fa fa-caret-down" *ngIf="this.currentState === 'financiacion'"  aria-hidden="true"></i>
+        </span>
+      </li>
+       <li>
+        <span (click)=" this.setCurrentState( 'mis-datos' ) ">
+          Mis datos
+          <i class="fa fa-caret-right" *ngIf="this.currentState !== 'mis-datos'" aria-hidden="true"></i>
+          <i class="fa fa-caret-down" *ngIf="this.currentState === 'mis-datos'"  aria-hidden="true"></i>
+        </span>
+        <ul *ngIf=" this.currentState === 'mis-datos' ">
+          <li>
+            <a href="">Datos de acceso</a>
+          </li>
+          <li>
+            <a href="">Datos personales</a>
+          </li>
+          <li>
+            <a href="">Unidad familiar</a>
+          </li>
+          <li>
+            <a href="">Direcciones de envío</a>
+          </li>
+          <li>
+            <a href="">Datos de facturación</a>
+          </li>
+          <li>
+            <a href="">Direcciones de envío</a>
+          </li>
+          <li>
+            <a href="">Datos de pago</a>
+          </li>
+          <li>
+            <a href="">Dar de baja</a>
+          </li>
+        </ul>
+      </li>
+      <li (click)="this.setCurrentState( 'prefencias' ) ">
+        <span>
+          Preferencias
+          <i class="fa fa-caret-right" *ngIf="this.currentState !== 'prefencias'" aria-hidden="true"></i>
+          <i class="fa fa-caret-down" *ngIf="this.currentState === 'prefencias'"  aria-hidden="true"></i>
+        </span>
+      </li>
+    </ul>
+  </nav>
+</section>

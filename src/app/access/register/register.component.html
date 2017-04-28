@@ -1,0 +1,54 @@
+<section>
+
+  <article class="row">
+    <h1>Bienvenido</h1>
+  </article>
+
+  <article class="row flexContent flex1 little">
+
+    <div class="colum">
+      <div class="mod-border">
+
+        <p>Genial. Ahora verifica el correo electrónico y añade una contraseña de acceso para continuar.</p>
+
+        <modAvisos *ngIf="infoShow"
+                   [tipoAviso]='infoClass'
+                   [textoAviso]='infoText'>
+        </modAvisos>
+
+        <form [formGroup]="stateForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <div class="formrow">
+            <input type="email" name="email" formControlName="email" id="email" [disabled]="submitted"/>
+            <label for="email" [ngClass]="{'top': stateForm.value.email}">Email *</label>
+          </div>
+
+          <div class="formrow">
+            <input type="email" name="email02" formControlName="email02" id="email02"/>
+            <label for="email02" [ngClass]="{'top': stateForm.value.email02}">Repite tu email *</label>
+            <tooltip icon="error"
+                     descp="'El correo electrónico no coincide"
+                     [hidden]="!statusEmail">
+            </tooltip>
+          </div>
+
+          <div class="formrow" *ngIf="nameForm != 'login'">
+            <input type="password" name="password" formControlName="password" id="password"/>
+            <label for="password" [ngClass]="{'top': stateForm.value.password}">Contraseña *</label>
+          </div>
+
+          <div class="formrow formButton">
+            <button type="submit" [disabled]="!stateForm.valid" class="bigButton">
+              <span *ngIf="!sending">Continuar</span>
+              <span *ngIf="sending">Un momento <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </article>
+
+</section>
