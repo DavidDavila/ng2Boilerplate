@@ -1,0 +1,39 @@
+.coupons-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .coupon {
+    cursor: pointer;
+    border: 2px dashed $negro01;
+    color: $negro01;
+    min-height: 150px;
+    border-right-color: transparent !important;
+    padding: 24px 30px;
+    padding-right: 15px;
+    width: 33%;
+
+    &:last-child {
+      border-right: 2px dashed $negro01 !important;
+    }
+
+    .coupon-title {
+      font-weight: 600;
+      font-size: 20px;
+
+      .favourite {
+        color: $brand;
+        margin-left: 5px;
+      }
+    }
+
+    .coupon-status {
+
+    }
+
+    &.coupon-disabled {
+      color: $gris04;
+      border-color: $gris04;
+    }
+  }
+
+}

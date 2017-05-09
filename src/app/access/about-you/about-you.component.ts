@@ -19,6 +19,10 @@ export class AboutYouComponent implements OnInit {
   /* Formulario */
   stateForm: FormGroup;
 
+  lat: number = 36.1438306;
+  lng: number = -5.460311111111111;
+  zoom: number = 8;
+
   constructor(
     private _router: Router,
     private _clientModel: ClientModel
@@ -34,8 +38,7 @@ export class AboutYouComponent implements OnInit {
       supermercados: new FormControl({value:'', disabled: false}),
       deporte: new FormControl({value:'', disabled: false}),
       tecnologia: new FormControl({value:'', disabled: false}),
-      motor: new FormControl({value:'', disabled: false}),
-      buscadorCentro: new FormControl({value:'', disabled: false}),
+      motor: new FormControl({value:'', disabled: false})
     });
   }
 

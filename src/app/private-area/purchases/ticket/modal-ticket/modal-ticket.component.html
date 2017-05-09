@@ -1,0 +1,19 @@
+<header md-dialog-title class="headerModal">
+	<div class="pull-right headerModalBtns">
+		<button (click)="download()" type="button"><i class="fa fa-download" aria-hidden="true"></i> Descargar</button>
+		<button (click)="print()" type="button"><i class="fa fa-print" aria-hidden="true"></i> Imprimir</button>
+	</div>
+
+	<span>
+		<button md-dialog-close class="fa fa-times close" aria-hidden="true"></button>
+		{{  ticket?.date | amDateFormat: 'DD/MM/YYYY'}} <i class="separator-pipe">|</i>
+	</span>
+	<span>{{ticket?.mall.name}}</span>
+</header>
+<md-dialog-content>
+	<section class="row">
+		<article>
+			<p *ngFor="let line of ticket.lines" [innerHTML]="line | replaceSpaceLines" class="ticket-data"></p>
+		</article>
+	</section>
+</md-dialog-content>

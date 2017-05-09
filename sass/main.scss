@@ -7,7 +7,10 @@
 @import "formularios";
 @import "estructura";
 @import "modulos";
-
+@import "printTicket";
 /* Componentes */
-
-@import "menu-private-area/menu-private-area";
+@import "menu-private-area";
+@import "ticket";
+@import "dropdown/dropdown";
+@import "coupons/coupon";
+@import "coupons/modal-coupons";

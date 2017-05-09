@@ -22,7 +22,7 @@
             <label for="email" [ngClass]="{'top': _clientModel.email}">Email *</label>
           </div>
 
-          <div class="formrow" *ngIf="nameForm != 'login'">
+          <div class="formrow">
             <input type="password" name="password" formControlName="password" id="password"/>
             <label for="password" [ngClass]="{'top': stateForm.value.password}">Contraseña *</label>
             <tooltip icon="error"
@@ -38,7 +38,7 @@
             </button>
           </div>
 
-          <div class="formrow formLinkCenter" *ngIf="nameForm === 'registrado'">
+          <div class="formrow formLinkCenter">
             <a routerLink="/recuperarContrasena" title="No recuerdo mi contraseña">No recuerdo mi contraseña</a>
           </div>
 

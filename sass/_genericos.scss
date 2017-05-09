@@ -1,3 +1,8 @@
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}
 body{
   font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
@@ -5,6 +10,8 @@ body{
   font-weight: 400;
   background: $blanco;
   position: relative;
+  font-size: 14px;
+  line-height: 1.428;
 }
 html {
     // background color when tapping on a phone

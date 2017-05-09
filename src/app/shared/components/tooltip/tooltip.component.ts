@@ -18,9 +18,9 @@ export class TooltipComponent {
    @Input() icon:string;
    @Input() literal:string;
 
-   private hover = false;
-   private visible = false;
-   private topTooltip: number;
+   public hover = false;
+   public visible = false;
+   public topTooltip: number;
    public posicionTooltip: string;
 
    constructor(private el:ElementRef){

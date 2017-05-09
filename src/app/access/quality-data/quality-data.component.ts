@@ -25,12 +25,12 @@ export class QualityDataComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _clientModel: ClientModel
+    public _clientModel: ClientModel
   ) { }
 
   /* -- Datos del usuario -- */
   private user;
-  private emails;
+  public emails;
 
   ngOnInit() {
     if(typeof this._clientModel.email === 'object' && !this._clientModel.isClub){

@@ -21,7 +21,7 @@ export class PersonalDataComponent implements OnInit {
   
   constructor(
     private _router: Router,
-    private _clientModel: ClientModel
+    public _clientModel: ClientModel
   ) {}
 
   ngOnInit() {

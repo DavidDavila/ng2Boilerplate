@@ -1,0 +1,11 @@
+<app-access-data *ngIf="innerWidth > 1024 || currentState === 'datos-acceso'"></app-access-data>
+
+<app-personal-data *ngIf="innerWidth > 1024 || currentState === 'datos-personales'"></app-personal-data>
+
+<app-family-data *ngIf="innerWidth > 1024 || currentState === 'dunidad-familiar'"></app-family-data>
+
+<app-shipping-addresses *ngIf="innerWidth > 1024 || currentState === 'direcciones-envio'"></app-shipping-addresses>
+
+<app-billing-information *ngIf="innerWidth > 1024 || currentState === 'datos-facturacion'"></app-billing-information>
+
+<app-payment-details *ngIf="innerWidth > 1024 || currentState === 'datos-pago'"></app-payment-details>

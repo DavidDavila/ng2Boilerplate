@@ -21,7 +21,7 @@ const routes: Routes = [
   //Submódulo de acceso
   {
     path: 'acceso',
-    loadChildren: './access/access.module'
+    loadChildren: './access/access.module#AccessModule'
   },
 
   //Submódulo de área privada

@@ -1,4 +1,12 @@
-
+.left{
+  text-align: left;
+}
+.right{
+  text-align:right ;
+}
+.center{
+  text-align: center ;
+}
 #headerPage {
   background: $gris01;
   width: 100%;
@@ -112,12 +120,21 @@ hr {
       @include desktop {
         width: 50%;
 
-        &:nth-child(1) {
+        &:nth-child(1),
+        &:nth-child(2n+1){
           padding-left: 0;
         }
         &:nth-child(2){
           padding-right: 0;
         }
+
+        &.little {
+          width:33%;
+        }
+        &.big {
+          width:66%;
+        }
+
       }
     }
   }
@@ -179,5 +196,12 @@ hr {
       }
     }
   }
+}
+
+.columSticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  display: inline-table;
 }
 

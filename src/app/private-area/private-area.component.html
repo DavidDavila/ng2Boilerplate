@@ -1,12 +1,12 @@
 <section>
 
   <article class="row">
-    <h1>El Carrefour de James</h1>
+    <h1 class="left">El Carrefour de James</h1>
   </article>
 
   <article class="row flexContent flex4">
 
-    <div class="colum">
+    <div class="colum"  [ngClass]="{'columSticky': windowHeight > 650}" >
       <app-menu></app-menu>
     </div>
 

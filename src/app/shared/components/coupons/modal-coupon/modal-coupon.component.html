@@ -1,0 +1,90 @@
+<header md-dialog-title class="headerModal">
+  <div class="pull-right headerModalBtns">
+    <button (click)="download($event)" type="button"><i class="fa fa-download" aria-hidden="true"></i> Descargar</button>
+    <button (click)="print()" type="button"><i class="fa fa-print" aria-hidden="true"></i> Imprimir</button>
+  </div>
+
+  <span>
+		<button md-dialog-close class="fa fa-times close" aria-hidden="true"></button>
+	</span>
+  <span>{{ coupon?.name }}</span>
+</header>
+
+<md-dialog-content [ngClass]="{'modal-coupons-disabled': coupon.disabled}" class="modal-coupons" id="modal-component">
+
+  <section *ngIf="coupon.multi; else coupon_simple">
+    <article class="big-coupon">
+      <div class="clearfix mb-20">
+        <div class="coupon-code">
+
+        </div>
+        <div class="coupon-header">
+          <header class="coupon-title">Multicupón</header>
+          <h5 class="coupon-subtitle">Hiper SS. de los Reyes</h5>
+        </div>
+      </div>
+      <p class="coupon-details">
+        En selección de pequeño electrodoméstico para toda la gama blanca de Carrefour
+      </p>
+    </article>
+
+    <article class="child-coupon">
+      <header class="coupon-title">10% de descuento</header>
+      <p class="coupon-details">
+        En selección de pequeño electrodoméstico para toda la gama blanca de Carrefour
+      </p>
+      <ul class="coupon-info">
+        <li>
+          <span class="coupon-info-title">Pedidos online</span>
+          <span>Valido en</span>
+        </li>
+        <li>
+          <span class="coupon-info-title">Compra mínima</span>
+          <span>Sin restricciones</span>
+        </li>
+        <li>
+          <span class="coupon-info-title">Estado</span>
+          <span>Caducado</span>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <ng-template #coupon_simple>
+    <section>
+      <article class="big-coupon coupon-no-child">
+        <div class="clearfix mb-20">
+          <div class="coupon-code">
+
+          </div>
+          <div class="coupon-header">
+            <header class="coupon-title">10%</header>
+            <h5 class="coupon-subtitle text-uppercase">Descuento</h5>
+          </div>
+        </div>
+        <p class="coupon-details">
+          En selección de pequeño electrodoméstico para toda la gama blanca de Carrefour
+        </p>
+        <ul class="coupon-info">
+          <li>
+            <span class="coupon-info-title">Pedidos online</span>
+            <span>Valido en</span>
+          </li>
+          <li>
+            <span class="coupon-info-title">Compra mínima</span>
+            <span>Sin restricciones</span>
+          </li>
+          <li>
+            <span class="coupon-info-title">Estado</span>
+            <span>Caducado</span>
+          </li>
+          <li>
+            <span class="coupon-info-title">Estado</span>
+            <span>Utilizado - <a href="">Ver compra</a></span>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </ng-template>
+
+</md-dialog-content>

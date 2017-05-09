@@ -1,0 +1,63 @@
+#menu-private-area {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: $negro01;
+
+  >ul{
+    >li{
+      font-size: 1.8rem;
+      &:after{
+        display: none;
+      }
+      &:hover{
+        background-color: $grisHover;
+      }
+      >span{
+        i{
+          float: right;
+        }
+      }
+      >ul{
+        border-top: 1px solid $gris02;
+        width:100%;
+        padding: 0;
+        display:none;
+        background: $blanco;
+        &.show {
+          display:block;
+        }
+        >li{
+          padding: 0;
+          >a{
+            padding:1rem 2rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 1.4rem;
+            color: $gris01;
+            display: block;
+            line-height: normal;
+            &.selected{
+              background-color: rgba(248, 248, 248, 1);
+              font-weight: bold;
+              background: $gris03;
+              border-left: 2px solid $azul01;
+              border-right: 2px solid $azul01;
+              color: $negro01;
+            }
+
+            &:hover {
+              text-decoration: none;
+              background: $gris03;
+              color: $negro01;
+            }
+          }
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

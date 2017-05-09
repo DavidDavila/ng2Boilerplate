@@ -1,0 +1,70 @@
+.dropdown{
+	position: relative;
+	cursor: pointer;
+	>div{
+		display: table;
+	    height: 100%;
+	    width: 100%;
+	    position: relative;
+	    top: -20px;
+		>div{
+			font-weight: 400;
+			font-style: normal;
+			font-size: 14px;
+			padding: 0px 20px;
+			display: table-cell;
+			vertical-align: bottom;
+			&:after{
+				height: 1px;
+			    background: #333;
+			    width: calc(100% + 40px);
+			    content: '';
+			    display: block;
+			    margin-top: 5px;
+			    position: relative;
+			    left: -20px;
+			}
+			>span{			
+				font-weight: 400;
+				font-style: normal;
+				font-size: 12px;
+				color: #74767B;
+				text-transform: uppercase;
+				position: absolute;
+				top: 10px;
+				left: 20px;
+			}
+			i{				
+				float: right;
+			}
+		}
+		>ul{
+			display: none;
+			width: 100%;
+			z-index: 1000;
+			padding: 0;
+			position: absolute;
+			top:100%;
+			left: 0;
+			background: #f2f2f2;
+			padding: 5px 0 10px 0;
+			>li{
+				list-style: none;
+				font-weight: 400;
+			    font-style: normal;
+			    font-size: 14px;
+			    line-height: 28px;
+			    padding: 0 20px;
+			    &:after{
+			    	display: none;
+			    }
+			}
+		}
+		&.open{
+			>ul{
+				display: block;
+			}
+		}
+	}
+	
+}

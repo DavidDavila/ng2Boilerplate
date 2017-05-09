@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-private-area',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivateAreaComponent implements OnInit {
 
-  constructor() { }
+  public windowHeight: number = window.innerHeight;
+
+  constructor() {}
 
   ngOnInit() {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.windowHeight = event.target.innerHeight;
+    console.log(this.windowHeight);
   }
 
 }

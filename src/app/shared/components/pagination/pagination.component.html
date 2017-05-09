@@ -1,8 +1,18 @@
-<section>
+<section class="pagination row" *ngIf="totalPages"> 
   <article>
     <ul>
-      <li *ngFor=" let item of pagesToShow " (click)=" item !== '...' ? setActualPage(item) : '' ">
-        {{item}}
+    	<li *ngIf="actualPage !== 1" class="noBorder" (click)=" removeOne() ">
+    		<span class="fa fa-caret-left" aria-hidden="true"></span>
+    	</li>
+      <li *ngFor=" let item of pagesToShow " 
+      	[ngClass]="{'noBorder': item === actualPage || item === '...'}" 
+      	(click)=" item !== '...' ? 
+      	setActualPage(item) : '' ">
+
+        <span>{{item}}</span>
+      </li>
+      <li class="noBorder" *ngIf="actualPage !== totalPages" (click)=" addOne() " class="noBorder">
+      	<span class="fa fa-caret-right" aria-hidden="true"></span>
       </li>
     </ul>
   </article>

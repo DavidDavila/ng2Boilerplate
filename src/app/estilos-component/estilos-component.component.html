@@ -43,7 +43,7 @@
             <label for="email"  [ngClass]="{'top': stateForm.value.email}">Email *</label>
           </div>
 
-          <div class="formrow" *ngIf="nameForm != 'login'">
+          <div class="formrow">
             <input type="password" name="password" formControlName="password" id="password"/>
             <label for="password" [ngClass]="{'top': stateForm.value.password}">Contraseña *</label>
           </div>

@@ -1,16 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {
-  MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule,
-  MdCoreModule,
-  MdDialogModule, MdGridListModule, MdIconModule,
-  MdInputModule,
-  MdLineModule, MdListModule, MdMenuModule, MdOptionModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule,
-  MdRippleModule,
-  MdSelectionModule,
-  MdSelectModule, MdSidenavModule, MdSliderModule, MdSlideToggleModule, MdSnackBarModule, MdTabsModule, MdToolbarModule,
-  MdTooltipModule,
-  OverlayContainer
-} from '@angular/material';
 
  /*
   El componenter Dropdown recibe:
@@ -34,32 +22,23 @@ export class DropdownComponent implements OnInit {
 
   @Output() itemClicked = new EventEmitter();
 
-  public foods:Array<any>
+  public currentSelected;
+  public isOpen;
+  
   constructor() {
-
-    this.foods = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
-
+    this.isOpen = false;
   }
 
   ngOnInit() {
+    this.currentSelected = this.title;
+  } 
+  selectItem(item){
+    
+    this.currentSelected = item.name
+    this.itemClicked.emit( item.value );    
   }
-
-  onItemSelected($event){
-  }
-
-  onItemClicked($event, name){
-    this.title = this.data[$event.value].name;
-    this.itemClicked.emit($event.value);
-  }
-
-  onShow($event){
-  }
-
-  onHide($event,  name){
+  toggleSelected(){
+    this.isOpen =  !this.isOpen
   }
 
 }

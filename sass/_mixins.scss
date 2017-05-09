@@ -48,3 +48,21 @@
   -o-transition: $args;
   transition: $args;
 }
+
+// Transform
+//@include transform(translate3d(0px, 0px, 0px) scale(1));
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -ms-transform: $args; // IE9 only
+  -o-transform: $args;
+  transform: $args;
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+

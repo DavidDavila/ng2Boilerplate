@@ -1,0 +1,56 @@
+<section class="row">
+	<article>
+		<ul id="ticketList" class="listGroup">
+			<li>
+				<ul>
+				 <li> <span>Area</span> </li>
+				 <li> <span>Fecha</span> </li>
+				 <li> <span>Detalle</span> </li>
+				 <li> <span>Estado</span> </li>
+				 <li> <span>Importe</span> </li>
+				 </ul>
+			</li>
+			
+			<li *ngFor="let ticket of data">
+				<a [routerLink]="[ ticket.ticketId ]">
+					<ul>
+
+						<!-- blue // green // black -->	
+						<li>
+							<span class="area-field" 
+								[ngClass]="
+									{ 
+										'blue' : ticket.header._ticketType.description === 'Online',
+										'green' : ticket.header._ticketType.description === 'Repostaje',
+										'black' : ticket.header._ticketType.description === 'Hiper'
+									}"
+								>
+									{{ticket.header._ticketType.description}}
+							</span>
+						</li>
+						<li><span class="date-field">{{ticket.date | amDateFormat: 'DD/MM/YYYY'}}</span></li>
+						<li>
+							<span class="detail-field">
+								{{ticket.header.operationType}}
+								<i class="fa fa-star" aria-hidden="true" *ngIf="ticket.favourite"></i>
+							</span>
+
+						</li>
+						<!-- yellow // orange // green -->	
+						<li><span class="state-field" 
+							[ngClass]="
+								{ 
+									'yellow' : ticket.header.state === 'Pendiente',
+									'orange' : ticket.header.state === 'Revisa tu pedido',
+									'green' : ticket.header.state === 'Entregado'
+								}"
+							>
+						<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ticket.header.state}}</span></li>
+						<li><span class="cost-field">{{ticket.header.netAmount}} €</span></li>
+					</ul>
+				</a>
+			</li>
+
+		</ul>
+	</article>
+</section>

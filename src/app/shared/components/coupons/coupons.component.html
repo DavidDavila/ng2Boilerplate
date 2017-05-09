@@ -1,0 +1,13 @@
+<div class="coupons-list">
+  <div *ngFor="let coupon of coupons"
+       (click)="openCouponModal(coupon)"
+       [ngClass]="{'coupon-disabled': coupon.disabled}"
+       class="coupon">
+    <h5 class="coupon-title">5€ de descuento <i class="fa fa-star favourite"></i></h5>
+    <p class="coupon-details">Selección de pequeño electrodoméstico para toda la gama blanca de Carrefour</p>
+    <div class="coupon-status">
+      Estado: Utilizado -
+      <a href="">Ver compra</a>
+    </div>
+  </div>
+</div>

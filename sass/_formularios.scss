@@ -1,7 +1,7 @@
 .formrow {
   position: relative;
   width: 100%;
-  padding: 1.2rem 0 2rem 0;
+  padding: 1.2rem 0 3rem 0;
 
   &.formButton {
     padding-top:0;
@@ -77,7 +77,11 @@ label {
     top: 0rem;
     padding: 0;
     font-size: 1rem;
-    color: $gris01;
+    color: $azul01;
+
+    i {
+      display: none;
+    }
   }
 
   &.radioButton {
@@ -109,7 +113,7 @@ input[type='text'] {
 
   &:focus,
   &.ng-dirty {
-
+    border-color: $azul01;
     &:-webkit-autofill {
       background-color : $blanco !important;
       -webkit-box-shadow: none;
@@ -122,7 +126,7 @@ input[type='text'] {
       top: 0;
       font-size: 1rem;
       padding: 0;
-      color: $gris01;
+      color: $azul01;
         
       i {
         display:none;

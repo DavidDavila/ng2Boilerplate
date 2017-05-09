@@ -1,0 +1,141 @@
+<div>
+  <a [routerLink]="['/area-privada/mis-compras']">
+    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+    Volver al listado
+  </a>
+</div>
+
+<div id="ticket-page">
+  <h2 class="title">
+    Detalle de la compra
+    <span class="pull-right text-uppercase">
+      Total:
+      {{ ticket?.header.netAmount | currency:'EUR': true: '1.2-2' }}
+    </span>
+    <strong class="separator-pipe normal-text">|</strong>
+    <span class="normal-text text-gray">{{ ticket?.date | date:'dd/MM/yyyy' }}</span>
+  </h2>
+
+  <div class="mod-border padding-0">
+
+    <div class="ticket-buttons-action">
+      <div><button (click)="openTicketModal()" class="btn btn-small btn-success" type="button">Ver ticket</button></div>
+      <div><button class="btn btn-small btn-brand-border mt-20" type="button">Ver factura</button></div>
+    </div>
+
+    <div class="ticket-info">
+
+      <div *ngIf="ticket?.mall" class="ticket-info-list">
+        <strong class="normal-text">Centro</strong>
+
+        <div class="text-gray">
+          <div class="pull-right view-on-map">
+            <a href="https://maps.google.com/maps?q={{ ticket?.mall.latitude }},{{ ticket?.mall.longitude }}&hl=es;"
+               target="_blank">
+              <i class="fa fa-map-marker"></i> Ver en el mapa
+            </a>
+          </div>
+
+          <strong class="text-uppercase">{{ ticket?.mall.name }}</strong>
+          <i class="fa fa-star ml-15 text-yellow"></i>
+        </div>
+
+        <div class="text-gray">
+          <div>{{ ticket?.mall.address }}</div>
+          <div>{{ ticket?.mall.postalCode }} {{ ticket?.mall.city }}, {{ ticket?.mall.province }}</div>
+        </div>
+      </div>
+
+      <div class="ticket-info-list">
+        <div>
+          <strong class="normal-text">
+            Pago -
+            <i class="text-success okText">Realizado</i>
+          </strong>
+        </div>
+        <div class="text-gray">
+          Tarjeta de crédito (Mastercard) terminada en -0484
+        </div>
+        <div class="text-gray">
+          Métalico
+        </div>
+
+        <!--<payment-status [status]="payment.status"></payment-status>-->
+        <!--<payment-data [data]="payment.data"></payment-data>-->
+      </div>
+
+    </div>
+
+    <div class="bg-brand bg-brand-icon icon-left text-uppercase">
+      <strong>
+        Acumulado en cheque ahorro
+      </strong>
+      <span class="pull-right">
+        <strong>{{ ticket?.concepts[0].amount | currency:'EUR': true: '1.2-2' }}</strong>
+      </span>
+    </div>
+
+  </div>
+
+  <div>
+    <table class="table table-bordered mt-20 mb-40">
+
+      <tbody>
+        <tr *ngFor="let item of ticket?.items | slice:0:maxTicketItemsFiltered;">
+          <td>{{ item.description | lowercase }}</td>
+          <td class="text-gray">{{ item.numberUnits }} Ud.</td>
+          <td></td>
+          <td class="text-right"><strong>{{ item.netAmount | currency:'EUR': true: '1.2-2' }}</strong></td>
+        </tr>
+
+        <tr *ngIf="(ticket?.items.length - maxTicketItemsFiltered) > 0">
+          <td colspan="4" class="text-gray text-center">
+            {{ (ticket?.items.length - maxTicketItemsFiltered) }} productos más -
+            <a (click)="viewAllItems()">Mostrar todos</a>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot class="text-gray">
+        <tr>
+          <td colspan="4" class="text-uppercase" (click)="showCoupons = !showCoupons;">
+            <span class="pull-right">
+              - {{ 15.37 | currency:'EUR': true: '1.2-2' }}
+
+              <i 
+                 [ngClass]="{'fa-plus': !showCoupons, 'fa-minus': showCoupons}"
+                 class="fa ml-15 cursor-pointer"></i>
+            </span>
+            Descuentos aplicados
+          </td>
+        </tr>
+
+        <tr [hidden]="!showCoupons" class="table-coupons-list">
+          <td></td>
+          <td colspan="2" class="font-normal">Cupones redimidos</td>
+          <td class="text-right">- {{ 8.10 | currency:'EUR': true: '1.2-2' }}</td>
+        </tr>
+        <tr [hidden]="!showCoupons" class="table-coupons-list">
+          <td></td>
+          <td colspan="2" class="font-normal">Promociones aplicadas</td>
+          <td class="text-right">- {{ 4.14 | currency:'EUR': true: '1.2-2' }}</td>
+        </tr>
+        <tr [hidden]="!showCoupons" class="table-coupons-list">
+          <td></td>
+          <td colspan="2" class="font-normal">Descuento empleado</td>
+          <td class="text-right">- {{ 5.37 | currency:'EUR': true: '1.2-2' }}</td>
+        </tr>
+
+      </tfoot>
+
+    </table>
+  </div>
+
+  <h3 class="title">Cupones generados</h3>
+  <app-coupons [coupons]="[
+  {disabled: true, name: 'Megacupón', multi: false},
+  {disabled: false, name: 'Megacupón', multi: false},
+  {disabled: false, name: 'Megacupón', multi: true}
+  ]"></app-coupons>
+
+</div>

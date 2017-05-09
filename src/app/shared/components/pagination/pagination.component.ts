@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 /*
   El componenter PaginationComponent recibe:
@@ -25,6 +25,9 @@ export class PaginationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  ngOnChanges() {
     this.setHtml( this.actualPage)
   }
 
@@ -42,6 +45,14 @@ export class PaginationComponent implements OnInit {
   setActualPage( pageNumber ){
     this.setHtml( this.actualPage = pageNumber );
     this.pageClicked.emit( this.actualPage );
+  }
+
+  addOne(){
+    this.setActualPage( ++this.actualPage )
+  }
+
+  removeOne(){
+    this.setActualPage( --this.actualPage )
   }
 }
 

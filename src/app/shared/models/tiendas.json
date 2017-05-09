@@ -1,0 +1,455 @@
+{
+  "_embedded": {
+    "mallResources": [
+      {
+        "mallId": "0220",
+        "mallType": "HYPERMARKET",
+        "@mallType": {
+          "code": "Hipermercado",
+          "description": "Hipermercado"
+        },
+        "community": "Andalucía",
+        "province": "Cádiz",
+        "name": "Carrefour Algeciras",
+        "address": "Carretera Cádiz - Málaga, km 106,25.",
+        "postalCode": "11204",
+        "city": "Algeciras",
+        "phone": "914 908 900",
+        "timetable": "de 09-00 a 22-00",
+        "festiveTimetable": "de 10-00 a 22-00",
+        "latitude": 36.1438306,
+        "longitude": -5.460311111111111,
+        "facebook": "carrefouralgeciras",
+        "twitter": "carrefourEs",
+        "instagram": "carrefoures",
+        "youtube": "carrefour",
+        "ticketLanguage": "castellano",
+        "internalId": "tcm-5-42247",
+        "atica": "4332",
+        "storeServices": [
+          "Cargador gratis",
+          "Entrega a domicilio",
+          "Fila única",
+          "Instalación y montaje",
+          "Taller de bicicletas",
+          "Wifi gratis"
+        ],
+        "carrefourServices": [],
+        "_links": {
+          "self": {
+            "href": "http://localhost:9004/api/v1/malls/0220"
+          }
+        }
+      },
+      {
+        "mallId": "0127",
+        "mallType": "HYPERMARKET",
+        "@mallType": {
+          "code": "Hipermercado",
+          "description": "Hipermercado"
+        },
+        "community": "Andalucía",
+        "province": "Cádiz",
+        "name": "Carrefour Arcos de la Frontera",
+        "address": "Parque Comercial Las Tiendas de Arcos.",
+        "postalCode": "11630",
+        "city": "Arcos de la Frontera",
+        "phone": "914 908 900",
+        "timetable": "de 09-00 a 22-00",
+        "festiveTimetable": "de 10-00 a 22-00",
+        "latitude": 36.747523,
+        "longitude": -5.823386,
+        "facebook": "carrefourarcosdelafrontera",
+        "twitter": "carrefourEs",
+        "instagram": "carrefoures",
+        "youtube": "carrefour",
+        "ticketLanguage": "castellano",
+        "internalId": "tcm-5-3865",
+        "atica": "00T2",
+        "storeServices": [
+          "Accesibilidad",
+          "Aparcamiento",
+          "Cajeros automáticos",
+          "Cambiador de bebé",
+          "Cargador gratis",
+          "Entrega a domicilio",
+          "Fila única",
+          "Financiación fácil",
+          "Gasolinera Carrefour",
+          "Instalación y montaje",
+          "Kiosco ONCE",
+          "Lavado de coches",
+          "Pantallas surtido ampliado",
+          "Pantallas venta por catálogo",
+          "Platos preparados",
+          "Punto de reciclaje",
+          "Revelado Kodak",
+          "Salas de cine",
+          "Sillas portabebé",
+          "Taller de bicicletas",
+          "Telefonía móvil",
+          "Wifi gratis"
+        ],
+        "carrefourServices": [
+          "Estaciones de Servicio Carrefour",
+          "Finanzas y Seguros Carrefour"
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:9004/api/v1/malls/0127"
+          }
+        }
+      },
+      {
+        "mallId": "0091",
+        "mallType": "HYPERMARKET",
+        "@mallType": {
+          "code": "Hipermercado",
+          "description": "Hipermercado"
+        },
+        "community": "Andalucía",
+        "province": "Cádiz",
+        "name": "Carrefour Bahía",
+        "address": "Calle Caño Herrera, s/n. Parque Comercial Bahía Sur.",
+        "postalCode": "11100",
+        "city": "San Fernando",
+        "phone": "914 908 900",
+        "timetable": "de 09-00 a 22-00",
+        "festiveTimetable": "de 10-00 a 22-00",
+        "latitude": 36.471425,
+        "longitude": -6.208485,
+        "facebook": "carrefourbahia",
+        "twitter": "carrefourEs",
+        "instagram": "carrefoures",
+        "youtube": "carrefour",
+        "ticketLanguage": "castellano",
+        "internalId": "tcm-5-3872",
+        "atica": "004Z",
+        "storeServices": [
+          "Accesibilidad",
+          "Administración de Loterías",
+          "Aparcamiento",
+          "Cajeros automáticos",
+          "Cambiador de bebé",
+          "Cargador gratis",
+          "Click&Collect",
+          "Entrega a domicilio",
+          "Fila única",
+          "Financiación fácil",
+          "Instalación y montaje",
+          "Kiosco ONCE",
+          "Montaje de neumáticos",
+          "Oficina de Correos",
+          "Parada de Taxis",
+          "Parafarmacia",
+          "Pizzería Carrefour",
+          "Platos preparados",
+          "Punto de reciclaje",
+          "Restaurantes",
+          "Revelado Kodak",
+          "Servicio informático",
+          "Servicios financieros Carrefour",
+          "Taller de bicicletas",
+          "Telefonía móvil",
+          "Transporte público",
+          "Viajes y Taquilla Carrefour",
+          "Wifi gratis"
+        ],
+        "carrefourServices": [
+          "Finanzas y Seguros Carrefour",
+          "Viajes Carrefour"
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:9004/api/v1/malls/0091"
+          }
+        }
+      },
+      {
+        "mallId": "0064",
+        "mallType": "HYPERMARKET",
+        "@mallType": {
+          "code": "Hipermercado",
+          "description": "Hipermercado"
+        },
+        "community": "Andalucía",
+        "province": "Cádiz",
+        "name": "Carrefour El Paseo",
+        "address": "Ctra. Nacional IV, KM. 653",
+        "postalCode": "11500",
+        "city": "El Puerto de Santa María",
+        "phone": "914 908 900",
+        "timetable": "de 09-00 a 22-00",
+        "festiveTimetable": "de 10-00 a 22-00",
+        "latitude": 36.617291,
+        "longitude": -6.210381,
+        "facebook": "carrefourelpaseo",
+        "twitter": "carrefourEs",
+        "instagram": "carrefoures",
+        "youtube": "carrefour",
+        "ticketLanguage": "castellano",
+        "internalId": "tcm-5-3889",
+        "atica": "004W",
+        "storeServices": [
+          "Accesibilidad",
+          "Cajeros automáticos",
+          "Cambiador de bebé",
+          "Consigna automática",
+          "Entrega a domicilio",
+          "Kiosco ONCE",
+          "Montaje de neumáticos",
+          "Parada de Taxis",
+          "Platos preparados",
+          "Revelado Kodak",
+          "Servicio informático",
+          "Sillas portabebé",
+          "Taller de bicicletas",
+          "Telefonía móvil",
+          "Zona de juego infantil Carrefour"
+        ],
+        "carrefourServices": [
+          "Estaciones de Servicio Carrefour",
+          "Finanzas y Seguros Carrefour",
+          "Taquilla Carrefour",
+          "Viajes Carrefour"
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:9004/api/v1/malls/0064"
+          }
+        }
+      },
+      {
+        "mallId": "0113",
+        "mallType": "HYPERMARKET",
+        "@mallType": {
+          "code": "Hipermercado",
+          "description": "Hipermercado"
+        },
+        "community": "Andalucía",
+        "province": "Cádiz",
+        "name": "Carrefour Jerez Norte",
+        "address": "Avda. de Europa, s/n",
+        "postalCode": "11405",
+        "city": "Jerez de La Frontera",
+        "phone": "914 908 900",
+        "timetable": "de 09-00 a 22-00",
+        "festiveTimetable": "de 10-00 a 22-00",
+        "latitude": 36.696046,
+        "longitude": -6.113981,
+        "facebook": "carrefourjereznorte",
+        "twitter": "carrefourEs",
+        "instagram": "carrefoures",
+        "youtube": "carrefour",
+        "ticketLanguage": "castellano",
+        "internalId": "tcm-5-3912",
+        "atica": "006D",
+        "storeServices": [
+          "Accesibilidad",
+          "Administración de Loterías",
+          "Aparcamiento",
+          "Cajeros automáticos",
+          "Cambiador de bebé",
+          "Cargador gratis",
+          "Click&Collect",
+          "Consigna automática",
+          "Entrega a domicilio",
+          "Fila única",
+          "Financiación fácil",
+          "Gasolinera Carrefour",
+          "Instalación y montaje",
+          "Kiosco ONCE",
+          "Kioscos Club Carrefour",
+          "Montaje de neumáticos",
+          "Pantallas surtido ampliado",
+          "Pantallas venta por catálogo",
+          "Parada de Taxis",
+          "Parafarmacia",
+          "Pizzería Carrefour",
+          "Platos preparados",
+          "Punto de reciclaje",
+          "Restaurantes",
+          "Revelado Kodak",
+          "Sala de lactancia Carrefour",
+          "Servicios financieros Carrefour",
+          "Sillas portabebé",
+          "Sushi Carrefour",
+          "Taller de bicicletas",
+          "Tartas de encargo",
+          "Telefonía móvil",
+          "Tintoreria",
+          "Transporte público",
+          "Viajes y Taquilla Carrefour",
+          "Wifi gratis",
+          "Zona de juego infantil Carrefour"
+        ],
+        "carrefourServices": [
+          "Estaciones de Servicio Carrefour",
+          "Finanzas y Seguros Carrefour"
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:9004/api/v1/malls/0113"
+          }
+        }
+      },
+      {
+        "mallId": "0016",
+        "mallType": "HYPERMARKET",
+        "@mallType": {
+          "code": "Hipermercado",
+          "description": "Hipermercado"
+        },
+        "community": "Andalucía",
+        "province": "Cádiz",
+        "name": "Carrefour Jerez Sur",
+        "address": "Carretera N-IV, km. 641. Puerta del Sur.",
+        "postalCode": "11408",
+        "city": "Jerez de La Frontera",
+        "phone": "914 908 900",
+        "timetable": "de 09-00 a 22-00",
+        "festiveTimetable": "de 10-00 a 22-00",
+        "latitude": 36.67162,
+        "longitude": -6.15183,
+        "facebook": "carrefourjerezsur",
+        "twitter": "carrefourEs",
+        "instagram": "carrefoures",
+        "youtube": "carrefour",
+        "ticketLanguage": "castellano",
+        "internalId": "tcm-5-3913",
+        "atica": "0016",
+        "storeServices": [
+          "Accesibilidad",
+          "Administración de Loterías",
+          "Aparcamiento",
+          "Cajeros automáticos",
+          "Cambiador de bebé",
+          "Cargador gratis",
+          "Consigna automática",
+          "Entrega a domicilio",
+          "Estanco",
+          "Fila única",
+          "Financiación fácil",
+          "Gasolinera Carrefour",
+          "Instalación y montaje",
+          "Kiosco ONCE",
+          "Montaje de neumáticos",
+          "Oficina de Correos",
+          "Parada de Taxis",
+          "Parafarmacia",
+          "Pizzería Carrefour",
+          "Platos preparados",
+          "Punto de reciclaje",
+          "Restaurantes",
+          "Revelado Kodak",
+          "Sala de lactancia Carrefour",
+          "Servicios financieros Carrefour",
+          "Sillas portabebé",
+          "Taller de bicicletas",
+          "Tartas de encargo",
+          "Telefonía móvil",
+          "Tintoreria",
+          "Transporte público",
+          "Wifi gratis"
+        ],
+        "carrefourServices": [
+          "Estaciones de Servicio Carrefour",
+          "Finanzas y Seguros Carrefour",
+          "Viajes Carrefour"
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:9004/api/v1/malls/0016"
+          }
+        }
+      },
+      {
+        "mallId": "0090",
+        "mallType": "HYPERMARKET",
+        "@mallType": {
+          "code": "Hipermercado",
+          "description": "Hipermercado"
+        },
+        "community": "Andalucía",
+        "province": "Cádiz",
+        "name": "Carrefour La Línea Gran Sur",
+        "address": "Avenida de la Colonia, 9.",
+        "postalCode": "11300",
+        "city": "La Línea",
+        "phone": "914 908 900",
+        "timetable": "de 09-00 a 22-00",
+        "festiveTimetable": "de 10-00 a 22-00",
+        "latitude": 36.17363,
+        "longitude": -5.362715,
+        "facebook": "carrefourlalinea",
+        "twitter": "carrefourEs",
+        "instagram": "carrefoures",
+        "youtube": "carrefour",
+        "ticketLanguage": "castellano",
+        "internalId": "tcm-5-3922",
+        "atica": "005A",
+        "storeServices": [
+          "Accesibilidad",
+          "Administración de Loterías",
+          "Aparcamiento",
+          "Café bar Carrefour",
+          "Cajeros automáticos",
+          "Cargador gratis",
+          "Click&Collect",
+          "Entrega a domicilio",
+          "Fila única",
+          "Financiación fácil",
+          "Gasolinera Carrefour",
+          "Instalación y montaje",
+          "Kiosco ONCE",
+          "Lavado de coches",
+          "Montaje de neumáticos",
+          "Pantallas surtido ampliado",
+          "Pantallas venta por catálogo",
+          "Parada de Taxis",
+          "Parafarmacia",
+          "Platos preparados",
+          "Punto de reciclaje",
+          "Revelado Kodak",
+          "Servicios financieros Carrefour",
+          "Sillas portabebé",
+          "Taller de bicicletas",
+          "Tartas de encargo",
+          "Telefonía móvil",
+          "Tintoreria",
+          "Transporte público",
+          "Wifi gratis"
+        ],
+        "carrefourServices": [
+          "Estaciones de Servicio Carrefour",
+          "Finanzas y Seguros Carrefour"
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:9004/api/v1/malls/0090"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:9004/api/v1/malls/?mallType=HYPERMARKET&size=10&page=0"
+    },
+    "first": {
+      "href": "http://localhost:9004/api/v1/malls/?mallType=HYPERMARKET&size=10&page=0"
+    },
+    "last": {
+      "href": "http://localhost:9004/api/v1/malls/?mallType=HYPERMARKET&size=10&page=19"
+    },
+    "next": {
+      "href": "http://localhost:9004/api/v1/malls/?mallType=HYPERMARKET&size=10&page=1"
+    }
+  },
+  "page": {
+    "size": 10,
+    "totalElements": 194,
+    "totalPages": 20,
+    "number": 0
+  }
+}

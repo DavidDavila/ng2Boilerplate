@@ -1,0 +1,30 @@
+@media print {
+  body * {
+    display: none;
+    position: static !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+  }
+  body .headerModal {
+    display: none !important;
+  }
+  body .cdk-overlay-container {
+    display: block;
+    max-width: initial;
+  }
+  body .cdk-overlay-container * {
+    padding: 0;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  body .cdk-overlay-container .cdk-overlay-dark-backdrop {
+    background: transparent;
+  }
+  body .cdk-overlay-container .cdk-global-overlay-wrapper .cdk-overlay-pane {
+    margin-top: 0;
+    height: auto;
+  }
+}

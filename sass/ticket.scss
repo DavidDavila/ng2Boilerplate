@@ -1,0 +1,276 @@
+#ticket-page {
+
+  .title {
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  .ticket-info {
+    overflow: hidden;
+  }
+
+  .ticket-buttons-action {
+    float: right;
+    padding: 2rem;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .view-on-map {
+    min-width: 40%;
+
+    .fa {
+      margin-right: 5px;
+    }
+  }
+
+  .ticket-info-list {
+    padding: 3rem 3rem 2rem 3rem;
+    border-bottom: 1px solid $gris02;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .table {
+    td {
+      text-transform: capitalize;
+
+      strong {
+        color: $negro01;
+      }
+    }
+
+    tfoot {
+      .table-coupons-list td {
+        border-bottom: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &:last-child {
+          padding-right: 52px;
+        }
+      }
+      td {
+        font-size: 14px;
+        font-weight: 600;
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+  }
+
+}
+
+// ---------------------- Botones ----------------------
+button {
+  background-color: transparent;
+  border: 0;
+  @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: default;
+  }
+
+}
+
+.btn {
+  border: none;
+  @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+.btn-small {
+  border: 2px solid transparent;
+  font-size: 14px;
+  padding: 12px 43px;
+  display: inline-block;
+}
+
+.btn-success {
+  background-color: $verde01;
+  color: $blanco;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($verde01, 15%);
+  }
+}
+
+.btn-brand-border {
+  color: $brand;
+  border: 2px solid $brand;
+  background-color: $blanco;
+}
+
+
+// ---------------------- Ajustes para textos ----------------------
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+// ---------------------- General classes ----------------------
+.clearfix {
+  @include clearfix();
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.separator-pipe {
+  margin: 0 10px;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.border-right-0 {
+  border-right: 0;
+}
+
+.mod-border-box {
+  width: 100%;
+  position: relative;
+  border: 1px solid $gris02;
+}
+
+
+// ---------------------- Contextual Backgrounds ----------------------
+.bg {
+
+  &-brand {
+    background-color: $brand;
+    padding: 14px;
+    font-size: 16px;
+
+    &-icon {
+      background-image: url('../assets/images/carrefour-logo-min.png');
+      background-repeat: no-repeat;
+      background-position-x: 20px;
+      background-position-y: 50%;
+      background-size: 42px;
+      padding-left: 70px;
+      padding-right: 50px;
+      color: $blanco;
+    }
+  }
+}
+
+// ---------------------- Textos ----------------------
+.font-normal {
+  font-weight: normal !important;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.normal-text {
+  font-size: 16px;
+}
+
+.big-text {
+  font-size: 18px;
+}
+
+// ---------------------- Colores para textos ----------------------
+.text-gray {
+  color: $gris01;
+}
+
+.text-yellow {
+  color: $amarillo01;
+}
+
+.text-success {
+  color: $verde01;
+}
+
+// ---------------------- Tablas ----------------------
+
+.table {
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-align: left;
+  color: $negro01;
+
+  td {
+    padding: 13px 50px 13px 35px;
+  }
+
+  tfoot {
+    background-color: $gris03;
+  }
+
+  &-bordered {
+
+    tr {
+      &:first-child {
+        border-top: 1px solid $gris02;
+      }
+      &:last-child {
+        border-bottom: 1px solid $gris02;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid $gris02;
+
+      &:first-child {
+        border-left: 1px solid $gris02;
+        cursor: pointer;
+      }
+
+      &:last-child {
+        border-right: 1px solid $gris02;
+      }
+
+    }
+  }
+}

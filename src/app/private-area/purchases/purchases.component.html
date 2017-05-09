@@ -5,48 +5,20 @@
       Mis compras
     </h2>
 
-    <app-dropdown (itemClicked)=" setFilter( $event, 'area' ) " class="colum" name="area" title="Area" [data]="this.areaData"></app-dropdown>
+    <app-dropdown (itemClicked)=" setFilter( $event, 'area' ) " class="dropdown colum" name="area" title="Area" [data]="this.areaData"></app-dropdown>
 
-    <app-dropdown (itemClicked)=" setFilter( $event, 'date' ) " class="colum" name="date" title="Rango de fechas" [data]="dateData"></app-dropdown>
+    <app-dropdown (itemClicked)=" setFilter( $event, 'date' ) " class="dropdown colum" name="date" title="Rango de fechas" [data]="dateData"></app-dropdown>
 
   </article>
 </section>
 
+<div>
+  <app-list-tickets [data]="ticketList"></app-list-tickets>
+</div>
 <section>
-  <ul>
-
-   <li>
-      <div>
-        <span>Area</span>
-        <span>Fecha</span>
-        <span>Detalle</span>
-      </div>
-      <div>
-        <span>Estado</span>
-        <span>Importe</span>
-      </div>
-    </li>
-
-    <li>
-      <a href="">
-        <div>
-          <span class="where"></span>
-          <span class="date"></span>
-          <span class="order"></span>
-        </div>
-        <div>
-          <span class="state"></span>
-          <span class="money"></span>
-        </div>
-      </a>
-    </li>
-  </ul>
+  <app-pagination  (pageClicked)=" setActualPage( $event ) " [actualPage]="actualPage" [totalPages]=" totalPages " ></app-pagination>
 </section>
-<section>
-  <app-pagination (pageClicked)=" setActualPage( $event ) " [actualPage]="actualPage" [totalPages]="totalPages" ></app-pagination>
-</section>
-{{areaCurrent.name}}
-{{dateCurrent.name}}
+{{filter | json}}
 {{actualPage}}
 {{totalPages}}
 

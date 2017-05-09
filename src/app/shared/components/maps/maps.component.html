@@ -1,0 +1,52 @@
+<div class="flexContent flex3 alignCenter" *ngIf="state === 'acerca-de-ti'">
+
+  <div class="colum formrow little last">
+    <h4 class="pb0">HIPER DE REFERENCIA</h4>
+  </div>
+
+  <div class="colum">
+    <tooltip literal="¿Por qué me preguntáis esto?"
+      descp="Tenemos diferentes ofertas, que renovamos casi diariamente, en cada uno de nuestros centros.<br/>Queremos saber esto porque de esa forma podremos avisarte de cuándo empezarán esas promociones para que puedas anticiparte y preparar tus compras.  ¿Qué más se puede pedir?">
+    </tooltip>
+  </div>
+
+  <div class="colum formrow big02 first">
+    <form (ngSubmit)="selectMarkerAutocomplete()" novalidate>
+      <input type="search" name="buscadorCentro" id="buscadorCentro" [mdAutocomplete]="auto" [formControl]="buscadorCentro"/>
+      <label for="buscadorCentro" [ngClass]="{'top': buscadorCentro.value}">INDICA CODIGO POSTAL O NOMBRE <i class="fa fa-search" aria-hidden="true"></i></label>
+    </form>
+    <md-autocomplete #auto="mdAutocomplete">
+      <md-option *ngFor="let center of autocompleteFiltered | async" [value]="center">
+        {{ center.name }}
+      </md-option>
+    </md-autocomplete>
+  </div>
+</div>
+
+<div class="map-container">
+  <sebm-google-map
+          [latitude]="latitude"
+          [longitude]="longitude"
+          [zoom]="zoom"
+          [zoomControl]="false"
+          [styles]="mapTypeStyleData"
+          [streetViewControl]="false"
+          [disableDefaultUI]='true'>
+
+    <sebm-google-map-marker
+            *ngFor="let m of this.markersData"
+            (markerClick)="clickedMarker(m)"
+            [latitude]="m.latitude"
+            [longitude]="m.longitude">
+    </sebm-google-map-marker>
+    <sebm-google-map-info-window  (infoWindowClose)="infoWindowClose()" [latitude]="infoWindows.latitude" [longitude]="infoWindows.longitude" [isOpen]="infoWindows.isOpen">
+      <div class="infoMap" >
+        <h4>{{infoWindows.name}}</h4>
+        <p>{{infoWindows.address}}, {{infoWindows.city}} {{infoWindows.postalCode}}</p>
+        <p>{{infoWindows.phone}}</p>
+        <p class="time"><i class="fa fa-clock-o" aria-hidden="true"></i> L-V: {{infoWindows.timetable}}</p>
+      </div>
+  </sebm-google-map-info-window>
+
+  </sebm-google-map>
+</div>

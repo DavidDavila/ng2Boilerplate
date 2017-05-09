@@ -19,7 +19,7 @@
         <form [formGroup]="stateForm" (ngSubmit)="onSubmit()" novalidate>
 
           <div class="formrow">
-            <input type="email" name="email" formControlName="email" id="email" [disabled]="submitted"/>
+            <input type="email" name="email" formControlName="email" id="email"/>
             <label for="email" [ngClass]="{'top': stateForm.value.email}">Email *</label>
           </div>
 
@@ -32,7 +32,7 @@
             </tooltip>
           </div>
 
-          <div class="formrow" *ngIf="nameForm != 'login'">
+          <div class="formrow">
             <input type="password" name="password" formControlName="password" id="password"/>
             <label for="password" [ngClass]="{'top': stateForm.value.password}">Contraseña *</label>
           </div>

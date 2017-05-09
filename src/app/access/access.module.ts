@@ -2,6 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+//External components
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import {
+  MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule,
+  MdCoreModule,
+  MdDialogModule, MdGridListModule, MdIconModule,
+  MdInputModule,
+  MdLineModule, MdListModule, MdMenuModule, MdOptionModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule,
+  MdRippleModule,
+  MdSelectionModule,
+  MdSelectModule, MdSidenavModule, MdSliderModule, MdSlideToggleModule, MdSnackBarModule, MdTabsModule, MdToolbarModule,
+  MdTooltipModule,
+  OverlayContainer
+} from '@angular/material';
+
 //Components
 import { AccessRoutingModule } from './access-routing.module';
 import { CheckEmailComponent } from './check-email/check-email.component';
@@ -22,13 +37,44 @@ import { StateMachineService } from "./shared/services/state-machine.service";
 //Components
 import { TooltipComponent } from "../shared/components/tooltip/tooltip.component";
 import { ModAvisosComponent } from "../shared/components/modAvisos/modAvisos.component";
+import { MapsComponent } from '../shared/components/maps/maps.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AccessRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdInputModule,
+    MdSelectModule,
+    MdDialogModule,
+    MdAutocompleteModule,
+    MdCardModule,
+    MdChipsModule,
+    MdLineModule,
+    MdMenuModule,
+    MdIconModule,
+    MdListModule,
+    MdOptionModule,
+    ReactiveFormsModule,
+    MdButtonToggleModule,
+    MdGridListModule,
+    MdProgressSpinnerModule,
+    MdSlideToggleModule,
+    MdSidenavModule,
+    MdToolbarModule,
+    MdSnackBarModule,
+    MdProgressBarModule,
+    MdTooltipModule,
+    MdTabsModule,
+    MdSliderModule,
+    MdSelectionModule,
+    MdRippleModule,
+    MdRadioModule,
+    MdCoreModule
   ],
   declarations: [
     CheckEmailComponent,
@@ -43,10 +89,12 @@ import { ModAvisosComponent } from "../shared/components/modAvisos/modAvisos.com
     QualityDataComponent,
     RegisterConfirmationComponent,
     TooltipComponent,
-    ModAvisosComponent
+    ModAvisosComponent,
+    MapsComponent
   ],
   providers:[
      StateMachineService
   ]
 })
-export default class AccessModule { }
+
+export class AccessModule { }

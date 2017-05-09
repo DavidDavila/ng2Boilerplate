@@ -1,10 +1,11 @@
 
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
 import { HttpModule } from '@angular/http';
+
+//External components
+import {MomentModule} from 'angular2-moment';
 
 //Components
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { ClientModel } from "./shared/models/client.model";
 import { AppRoutingModule } from './app-routing.module';
 import { CheckSessionComponent } from './check-session/check-session.component';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule,
@@ -34,7 +36,7 @@ import {
   MdTooltipModule,
   OverlayContainer
 } from '@angular/material';
-
+import { TicketModel } from './private-area/purchases/ticket/ticket.model';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import {
     FrontPageComponent,
     EstilosComponentComponent,
     CheckSessionComponent,
-    EstilosComponentComponent,
+    EstilosComponentComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -79,11 +81,17 @@ import {
     MdSelectionModule,
     MdRippleModule,
     MdRadioModule,
-    MdCoreModule
+    MdCoreModule,
+    MomentModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCh4Q9BN3QBvo0CIiTcZi-JI1WP8gVvOds'
+    })
   ],
   providers: [
      AuthService,
-     ClientModel
+     ClientModel,
+     TicketModel,
+    { provide: LOCALE_ID, useValue: 'es' }
   ],
   bootstrap: [
      AppComponent

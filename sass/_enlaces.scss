@@ -22,7 +22,7 @@ a {
   text-decoration: none;
   display: inline-block;
   outline: none;
-  @include transition(color .2s ease-in-out, background .2s ease-in-out);
+  @include transition(color .1s ease-in-out, background .1s ease-in-out);
   cursor: pointer;
 
   &:hover{
